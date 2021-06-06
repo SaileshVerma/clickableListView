@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E6D7A0"
+   android:padding="10dp"
+    >
+
+    <TextView
+        android:id="@+id/nameText"
+        android:layout_width="170dp"
+        android:layout_height="37dp"
+        android:text="Sailesh"
+
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/round"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toEndOf="@+id/round"
+        app:layout_constraintTop_toTopOf="@+id/round"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <TextView
+        android:id="@+id/round"
+        android:layout_width="57dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/round"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="S"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
