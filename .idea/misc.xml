@@ -3,13 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/user/AndroidStudioProjects/SecondApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.11481481481481481" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/SecondApp/app/src/main/res/drawable/ic_add_background.xml" value="0.13541666666666666" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/SecondApp/app/src/main/res/drawable/ic_add_foreground.xml" value="0.13541666666666666" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/SecondApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.11481481481481481" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SecondApp/app/src/main/res/drawable/round.xml" value="0.2125" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SecondApp/app/src/main/res/layout/activity_expandable_list_view.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SecondApp/app/src/main/res/layout/activity_list_view.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SecondApp/app/src/main/res/layout/activity_main.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/SecondApp/app/src/main/res/layout/activity_shared_preference.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/SecondApp/app/src/main/res/layout/activity_used_share_preference.xml" value="0.22" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SecondApp/app/src/main/res/layout/child_row_layout.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SecondApp/app/src/main/res/layout/parent_row_layout.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SecondApp/app/src/main/res/layout/rowlayoutlist.xml" value="0.2" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/SecondApp/app/src/main/res/menu/menubar.xml" value="0.11927083333333334" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/SecondApp/app/src/main/res/mipmap-anydpi-v26/ic_add.xml" value="0.11481481481481481" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/SecondApp/app/src/main/res/mipmap-anydpi-v26/ic_add_round.xml" value="0.11481481481481481" />
       </map>
     </option>
   </component>
