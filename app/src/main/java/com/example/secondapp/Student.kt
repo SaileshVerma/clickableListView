@@ -1,11 +1,11 @@
 package com.example.secondapp
 
 class Student {
-    public  var id:String;
-    public  var name:String;
-    public  var rollno:String;
-    public  var semester:String;
-    public  var dept:String;
+    public lateinit var id:String;
+    public lateinit var name:String;
+    public lateinit var rollno:String;
+    public lateinit var semester:String;
+    public lateinit var dept:String;
 
 public constructor(id:String,name:String,rollno:String,semester:String,dept:String)
 
@@ -17,6 +17,13 @@ public constructor(id:String,name:String,rollno:String,semester:String,dept:Stri
 
 
 }
+
+   public constructor(name:String,rollno:String,semester:String,dept:String){
+       this.name=name;
+       this.rollno=rollno;
+       this.semester=semester;
+       this.dept=dept;
+   }
 
 
 

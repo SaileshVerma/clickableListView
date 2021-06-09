@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SecondApp">
         <activity
-            android:name=".UsedSharePreference"
+            android:name=".AddStudentActivity"
             android:exported="true" />
         <activity
-            android:name=".SharedPreferenceActivity"
+            android:name=".StudentActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,6 +21,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".UsedSharePreference"
+            android:exported="true" />
+        <activity
+            android:name=".SharedPreferenceActivity"
+            android:exported="true" />
         <activity
             android:name=".ListViewActivity"
             android:exported="true"></activity>

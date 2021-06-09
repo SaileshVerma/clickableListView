@@ -3,6 +3,8 @@ package com.example.secondapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ListView
@@ -33,15 +35,7 @@ class ListViewActivity : AppCompatActivity() {
         namesList.add(Name("sailesh"))
         namesList.add(Name("ramgopal"))
         namesList.add(Name("rohan"))
-        namesList.add(Name("yara"))
-        namesList.add(Name("sailesh"))
-        namesList.add(Name("ramgopal"))
-        namesList.add(Name("rohan"))
-        namesList.add(Name("yara"))
-        namesList.add(Name("sailesh"))
-        namesList.add(Name("ramgopal"))
-        namesList.add(Name("rohan"))
-        namesList.add(Name("yara"))
+
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -69,7 +63,32 @@ class ListViewActivity : AppCompatActivity() {
 
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+         super.onCreateOptionsMenu(menu)
 
+        menuInflater.inflate(R.menu.menubar,menu)
+        return true;
+
+
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        return when(item.itemId){
+            R.id.add->{true}
+            R.id.delete->{true}
+            R.id.exit->{
+                finish()
+                true}
+
+
+
+            else-> super.onOptionsItemSelected(item)
+        }
+
+
+
+    }
 
 
 }

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFEB3B">
+
+    <TextView
+        android:id="@+id/roundchartext"
+        android:layout_width="61dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/round"
+        android:gravity="center"
+        android:text="T"
+        android:textColor="#F3E7E7"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nametextview"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginTop="28dp"
+        android:text="Sailesh Verma"
+        android:textColor="#0C0A0A"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintStart_toEndOf="@+id/roundchartext"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rollnotextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="101"
+        android:textColor="#191414"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintStart_toEndOf="@+id/roundchartext"
+        app:layout_constraintTop_toBottomOf="@+id/nametextview" />
+
+    <TextView
+        android:id="@+id/depttextview"
+        android:layout_width="63dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="20dp"
+        android:text="CSE"
+        android:textColor="#BC2B2B"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.071"
+        app:layout_constraintStart_toEndOf="@+id/rollnotextview"
+        app:layout_constraintTop_toBottomOf="@+id/nametextview" />
+
+    <TextView
+        android:id="@+id/semview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.158"
+        app:layout_constraintStart_toEndOf="@+id/depttextview"
+        app:layout_constraintTop_toBottomOf="@+id/nametextview" />
+</androidx.constraintlayout.widget.ConstraintLayout>
