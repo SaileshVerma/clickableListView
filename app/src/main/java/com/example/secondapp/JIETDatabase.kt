@@ -9,7 +9,7 @@ class JIETDatabase(context:Context) :SQLiteOpenHelper(context,"jietdb",null,1) {
     override fun onCreate(p0: SQLiteDatabase?) {
 
 
-        var create_table:String="CREATE TABLE STUDENT(ID INTEGER AUTO_INCREMENT PRIMARY KEY"+
+        var create_table:String="CREATE TABLE STUDENT(ID INTEGER  PRIMARY KEY AUTOINCREMENT"+
         ",NAME TEXT,ROLLNUMBER TEXT,SEMESTER TEXT,DEPARTMENT TEXT)"
 
 
@@ -65,6 +65,19 @@ class JIETDatabase(context:Context) :SQLiteOpenHelper(context,"jietdb",null,1) {
         return db.delete("STUDENT","ID=?", arrayOf(id))>0
     }
 
+
+    fun updateStudent(id:String,student:Student):Boolean{
+
+
+        var db=writableDatabase;
+        var contentValues=ContentValues();
+        // contentValues.put("ID",student.id);
+        contentValues.put("NAME",student.name);
+        contentValues.put("ROLLNUMBER",student.rollno);
+        contentValues.put("SEMESTER",student.semester);
+        contentValues.put("DEPARTMENT",student.dept);
+return db.update("STUDENT",contentValues,"ID=?", arrayOf(id))>0
+    }
 
 
 

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SecondApp">
         <activity
+            android:name=".UpdateActivity"
+            android:exported="true" />
+        <activity
             android:name=".AddStudentActivity"
             android:exported="true" />
         <activity
@@ -29,7 +32,7 @@
             android:exported="true" />
         <activity
             android:name=".ListViewActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".ExpandableListViewActivity"
             android:exported="true" />

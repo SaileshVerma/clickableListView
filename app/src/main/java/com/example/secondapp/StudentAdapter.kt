@@ -45,4 +45,10 @@ class StudentAdapter(private var ctx: Context, private var studentdata:ArrayList
 
 
     }
+
+
+    fun removeStudentData(student: Student){
+        studentdata.remove(student)
+        notifyDataSetChanged();
+    }
 }
