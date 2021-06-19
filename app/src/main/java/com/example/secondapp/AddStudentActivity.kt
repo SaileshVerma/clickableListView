@@ -35,7 +35,7 @@ private lateinit var savebtn:Button
 return@setOnClickListener
             }
 
-            database= JIETDatabase(applicationContext)
+            //database= JIETDatabase(applicationContext)
             var stud=Student(name,rollno,semi,deptmnt)
             if(database.addNewStudent(stud)){
                 Toast.makeText(applicationContext, "Record Added Successfully", Toast.LENGTH_LONG).show()

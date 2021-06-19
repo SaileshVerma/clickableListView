@@ -4,8 +4,9 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import com.example.secondapp.navigation.MailFragment
 
-class JIETDatabase(context:Context) :SQLiteOpenHelper(context,"jietdb",null,1) {
+class JIETDatabase(context: Context) :SQLiteOpenHelper(context,"jietdb",null,1) {
     override fun onCreate(p0: SQLiteDatabase?) {
 
 
@@ -35,7 +36,20 @@ class JIETDatabase(context:Context) :SQLiteOpenHelper(context,"jietdb",null,1) {
 
 
     }
-    
+//    fun checkname(name:String):Boolean{
+//        var db=readableDatabase;
+//        var query="SELECT NAME FROM STUDENT WHERE NAME = name";
+//
+//        var cursor=db.rawQuery(query,null);
+//        var names=cursor.getString(cursor.getColumnIndex("NAME"))
+//
+//
+//
+//    }
+
+
+
+
   fun getAllStudents():ArrayList<Student>{
 
       var db=readableDatabase
