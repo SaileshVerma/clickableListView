@@ -18,14 +18,21 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/SecondApp/app/src/main/res/layout/activity_expandable_list_view.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SecondApp/app/src/main/res/layout/activity_list_view.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SecondApp/app/src/main/res/layout/activity_main.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/SecondApp/app/src/main/res/layout/activity_main2.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/SecondApp/app/src/main/res/layout/activity_main3.xml" value="0.18229166666666666" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/SecondApp/app/src/main/res/layout/activity_main_contact.xml" value="0.10104166666666667" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/SecondApp/app/src/main/res/layout/activity_media.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SecondApp/app/src/main/res/layout/activity_navigation.xml" value="0.18" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SecondApp/app/src/main/res/layout/activity_shared_preference.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/SecondApp/app/src/main/res/layout/activity_storage.xml" value="0.33" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SecondApp/app/src/main/res/layout/activity_student.xml" value="0.1609375" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SecondApp/app/src/main/res/layout/activity_update.xml" value="0.18" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SecondApp/app/src/main/res/layout/activity_used_share_preference.xml" value="0.22" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SecondApp/app/src/main/res/layout/child_row_layout.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/SecondApp/app/src/main/res/layout/contactrowview.xml" value="0.25" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SecondApp/app/src/main/res/layout/fragment_bluetooth.xml" value="0.17291666666666666" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SecondApp/app/src/main/res/layout/fragment_call.xml" value="0.18229166666666666" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/SecondApp/app/src/main/res/layout/fragment_choose_media.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SecondApp/app/src/main/res/layout/fragment_login.xml" value="0.25" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SecondApp/app/src/main/res/layout/fragment_mail.xml" value="0.25" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SecondApp/app/src/main/res/layout/fragment_setting.xml" value="0.18229166666666666" />
