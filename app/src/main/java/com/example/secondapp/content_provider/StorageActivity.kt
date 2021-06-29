@@ -54,44 +54,48 @@ class StorageActivity : AppCompatActivity() {
 
 
 
-    fun permissions(){
+    fun permissions(){  if(ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA)!= PackageManager.PERMISSION_GRANTED){
+        ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CAMERA), 100)
+    }
+
         if(ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE), 100)
         }
         if(ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE), 100)
         }
-        if(ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA)!= PackageManager.PERMISSION_GRANTED){
-            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CAMERA), 100)
-        }
 
 
     }
 
-   fun init(){
+     fun init(){
         imageView=findViewById(R.id.imageView)
         internalsavebtn=findViewById(R.id.internalsavebtn)
        cachesavebtn=findViewById(R.id.cachesavebtn)
        publicsavebtn=findViewById(R.id.publicsavebtn);
-    }
+      }
+
+//
+//     fun getrealpathofimg(uri:Uri):String{ print("...........>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><")
+//        var projection= arrayOf(MediaStore.Images.Media.DATA);
+//        var cursor=contentResolver.query(uri,projection,null,null,null);
+//
+//         if(cursor!=null&&cursor!!.moveToFirst())
+//
+//            return cursor.getString(cursor.getColumnIndex(MediaStore.Images.Media.DATA))
+//           else return null.toString();
+//                                          }
 
 
-    fun getrealpathofimg(uri:Uri):String{
-        var projection= arrayOf(MediaStore.Images.Media.DATA);
-        var cursor=contentResolver.query(uri,projection,null,null,null);
-        if(cursor!=null&&cursor!!.moveToNext())
-            return cursor.getString(cursor.getColumnIndex(MediaStore.Images.Media.DATA))
-           else return null.toString()
 
 
-    }
 
-  fun savefile(status:Int,filepath:String){
+     fun savefile(status:Int,filepath:String){
       var currfile=File(filepath);
       var wallpaperdirectory:File?= null
 
       if(status==0){
-wallpaperdirectory=File(cacheDir,"wallpaper")
+               wallpaperdirectory=File(cacheDir,"wallpaper")
 
 
       }
@@ -110,8 +114,8 @@ wallpaperdirectory=File(cacheDir,"wallpaper")
           }
 
 
-      var outputfile=File(wallpaperdirectory,Calendar.getInstance().timeInMillis.toString()+".jpg")
-      if(currfile.exists()){
+      var outputfile=File(wallpaperdirectory,"img"+Calendar.getInstance().timeInMillis.toString()+".jpg")
+          if(currfile.exists()){
           var inputFileStream=FileInputStream(currfile);
           var outputfileStream=FileOutputStream(outputfile);
 
@@ -131,27 +135,62 @@ wallpaperdirectory=File(cacheDir,"wallpaper")
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-  if(requestCode==101&&resultCode==Activity.RESULT_OK&&data!=null){
+  if(requestCode==201&&resultCode==Activity.RESULT_OK&&data!=null){
       //for internal
-        var uri=data.data
-      var path=getrealpathofimg(uri!!);
-      savefile(0,path);
 
+     //  savefile(0);
+
+      var bitmap=data.extras?.get("data") as Bitmap
+      imageView.setImageBitmap(bitmap)
+     var wallpaperdirectory=File(cacheDir,"wallpaper")
+    if(!wallpaperdirectory.exists()){
+        wallpaperdirectory.mkdir();
+    }
+      var outputfile=File(wallpaperdirectory,"img.jpg")
+      var outstream=FileOutputStream(outputfile)
+      bitmap.compress(Bitmap.CompressFormat.JPEG,100,outstream);
+      outstream.flush()
+    outstream.close();
   }
 
-        if(requestCode==201&&resultCode==Activity.RESULT_OK&&data!=null){
+        if(requestCode==101&&resultCode==Activity.RESULT_OK&&data!=null){
          //for cache
-            var uri=data.data
-            var path=getrealpathofimg(uri!!);
-            savefile(1,path);
+//            var uri=data?.data
+//            var path=getrealpathofimg(uri!!);
+//            savefile(1,path);
+
+            var bitmap=data.extras?.get("data") as Bitmap
+            imageView.setImageBitmap(bitmap)
+           // var wallpaperdirectory=File(cacheDir,"wallpaper")
+           var wallpaperdirectory= getExternalFilesDir("wallpaper")!!
+            if(!wallpaperdirectory.exists()){
+                wallpaperdirectory.mkdir();
+            }
+            var outputfile=File(wallpaperdirectory,"img.jpg")
+            var outstream=FileOutputStream(outputfile)
+            bitmap.compress(Bitmap.CompressFormat.JPEG,100,outstream);
+            outstream.flush()
+            outstream.close();
         }
 
 
         if(requestCode==301&&resultCode==Activity.RESULT_OK&&data!=null){
        // for public
-            var uri=data.data
-            var path=getrealpathofimg(uri!!);
-            savefile(2,path);
+//            var uri=data?.data
+//            var path=getrealpathofimg(uri!!);
+//            savefile(2,path);
+
+            var bitmap=data.extras?.get("data") as Bitmap
+
+            var  wallpaperdirectory=Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM);
+            if(!wallpaperdirectory.exists()){
+                wallpaperdirectory.mkdir();
+            }
+            var outputfile=File(wallpaperdirectory,"img11111.jpg")
+            var outstream=FileOutputStream(outputfile)
+            bitmap.compress(Bitmap.CompressFormat.JPEG,100,outstream);
+            outstream.flush()
+            outstream.close(); imageView.setImageBitmap(bitmap)
         }
 
 
